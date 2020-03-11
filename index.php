@@ -6,7 +6,7 @@
         <title>拍照上傳</title>
         <link rel="stylesheet" href="index.css"/>
 		 <script src="https://www.kunlex.com.tw/newrepair/vendors/jquery/dist/jquery.min.js"></script>
-        <script type='text/javascript' src='index.js' charset='utf-8'></script>
+        <script type='text/javascript' src='index.js?<?php echo rand();?>' charset='utf-8'></script>
     </head>
     <body>
          <form id="mainForm">
@@ -32,10 +32,9 @@
                     </div>
                 </div>
             </div>
-		
           
             <div class="btn">
-                提交
+                提交<?php echo rand();?>
             </div>
          </form>
     </body>

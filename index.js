@@ -6,7 +6,7 @@ window.onload=function(){
         onFileChange(this,"back-result","back-empty-result")
     });
     document.getElementsByClassName("btn")[0].addEventListener("click", function(){       
-	 submit();
+	submit();
     });
 };
 
@@ -33,7 +33,7 @@ function onFileChange(fileObj,el,btnel){
 }
 
 /**
- * 将图片压缩后返回base64格式的数据
+ * 將圖片壓縮後返回base64格式的資料
  * @param {*} image img元素
  * @param {*} width 压缩后图片宽度
  * @param {*} height 压缩后图片高度
@@ -60,8 +60,8 @@ function submit(){
     var face_data=compressImageTobase64(document.getElementById("face-result"),500,500,90);
     var back_data=compressImageTobase64(document.getElementById("back-result"),500,500,90);
     var formData = new FormData();  
-    formData.append("facedd",face_data);
-    formData.append("backdd",back_data);
+    formData.append("face",face_data);
+    formData.append("back",back_data);
 	 
     //需引入jQuery
     $.ajax({
@@ -73,7 +73,7 @@ function submit(){
         processData: false,
         contentType: false,
         success:function(r){
-            alert("good");
+            alert("已上傳成功");
         },
         error:function(r){  
               alert("err");
